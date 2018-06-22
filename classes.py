@@ -172,4 +172,4 @@ class Protocol:
         sequence_x = sequence[0:len(sound)][:, 0]
         sound = self.permute(sound, sequence_x, -1)
         sound = self.difusion(sound, sequence_x, -1)
-        return sound
+        return sound.astype(int)
